@@ -1,6 +1,25 @@
-.container{
+.container {
     border: 2px solid red;
     width: 1200px;
     border-radius: 10px;
     height: 250px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.container div {
+    border: 1px solid rgb(166, 255, 0);
+}
+
+.container .dicesDiv {
+    background-color: rgb(35, 35, 35);
+}
+
+.container div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }

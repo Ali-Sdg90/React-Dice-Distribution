@@ -12,6 +12,7 @@ const App = () => {
             <Header />
             <ContolPanel />
             <Chart />
+            <button>Start</button>
             <Footer />
         </div>
     );
