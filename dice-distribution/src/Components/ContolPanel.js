@@ -24,7 +24,7 @@ const ContolPanel = () => {
                             prevState < 30 ? prevState + 1 : prevState
                         )
                     }
-                    style={diceCounter < 30 ? {} : { pointerEvents: "none" }}
+                    style={diceCounter < 30 ? {} : { pointerEvents: "none", opacity: "0.5" }}
                 ></img>
                 <img
                     src={downArrow}
@@ -34,7 +34,7 @@ const ContolPanel = () => {
                             prevState > 2 ? prevState - 1 : prevState
                         )
                     }
-                    style={diceCounter > 2 ? {} : { pointerEvents: "none" }}
+                    style={diceCounter > 2 ? {} : { pointerEvents: "none" , opacity: "0.5" }}
                 ></img>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "./App.module.css";
 
 import Chart from "./Components/Chart";
@@ -7,6 +7,8 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 
 const App = () => {
+
+  
     return (
         <div className={Styles.container}>
             <Header />

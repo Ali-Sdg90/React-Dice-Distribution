@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from "react";
 
-import Styles from "./Dice.module.css"
+import Styles from "./Dice.module.css";
+
+// useEffect(() =>{
+
+// },[])
 
 const Dice = (props) => {
     return (
         <div className={Styles.container}>
-            <div>HELLO</div>
+            <p>{props.diceNumber}</p>
         </div>
     );
 };
