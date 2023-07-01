@@ -6,9 +6,11 @@
     display: grid;
     margin: auto;
     grid-template-columns: 10% 80% 10%;
+
+    /* overflow: hidden; */
 }
 
-.container div {
+.container > div {
     border: 1px solid rgb(166, 255, 0);
 }
 
@@ -16,10 +18,32 @@
     background-color: rgb(35, 35, 35);
 }
 
-.container div:last-child{
+.container > div:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+}
+
+.container img {
+    width: 50px;
+    background-color: pink;
+    border-radius: 50%;
+    outline: 2px solid black;
+    outline-offset: -1px;
+    cursor: pointer;
+    transition: background-color 0.6s, transform 0.6s;
+}
+.container img:hover {
+    transition: background-color 0.15s, transform 0.15s;
+    transform: scale(1.02);
+    background: rgb(255, 106, 131);
+}
+.container img:active {
+    background: rgb(255, 81, 110);
+    transform: scale(0.95);
+}
+.container img::selection{
+    background: transparent;
 }
