@@ -3,6 +3,7 @@ import Styles from "./App.module.css";
 
 import Chart from "./Components/Chart";
 import ControlPanel from "./Components/ControlPanel";
+import DiceSum from "./Components/DiceSum";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 
@@ -14,17 +15,13 @@ const App = () => {
 
     const [diceCounter, setDiceCounter] = useState(22);
 
-    const [diceNumSum, setDiceNumSum] = useState(0);
-
-    const countSteps = () => {
-        setStep(1);
-    };
+    let diceNumSum = 0;
 
     useEffect(() => {
         if (step < stepCounter) {
             const timeout = setTimeout(() => {
                 setStep((prevStep) => prevStep + 1);
-            }, 1000);
+            }, 100);
 
             return () => clearTimeout(timeout);
         }
@@ -35,7 +32,6 @@ const App = () => {
             <AppContext.Provider
                 value={{
                     diceNumSum,
-                    setDiceNumSum,
                     step,
                     diceCounter,
                     setDiceCounter,
@@ -43,8 +39,9 @@ const App = () => {
             >
                 <Header />
                 <ControlPanel />
+                <DiceSum />
                 <Chart />
-                <button onClick={countSteps}>Start</button>
+                <button onClick={() => setStep(1)}>Start</button>
                 {/* <Footer /> */}
             </AppContext.Provider>
         </div>
