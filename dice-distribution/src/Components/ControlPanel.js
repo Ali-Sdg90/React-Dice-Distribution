@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
-import Styles from "./ContolPanel.module.css";
+import Styles from "./ControlPanel.module.css";
 import Dices from "./Dices";
 
 import upArrow from "../svg/up-arrow.svg";
 import downArrow from "../svg/down-arrow.svg";
 
+import { AppContext } from "../App";
+
 const ContolPanel = () => {
-    const [diceCounter, setDiceCounter] = useState(22);
+    const { diceCounter, setDiceCounter } = useContext(AppContext);
 
     return (
         <div className={Styles.container}>
@@ -24,7 +26,11 @@ const ContolPanel = () => {
                             prevState < 30 ? prevState + 1 : prevState
                         )
                     }
-                    style={diceCounter < 30 ? {} : { pointerEvents: "none", opacity: "0.5" }}
+                    style={
+                        diceCounter < 30
+                            ? {}
+                            : { pointerEvents: "none", opacity: "0.5" }
+                    }
                 ></img>
                 <img
                     src={downArrow}
@@ -34,7 +40,11 @@ const ContolPanel = () => {
                             prevState > 2 ? prevState - 1 : prevState
                         )
                     }
-                    style={diceCounter > 2 ? {} : { pointerEvents: "none" , opacity: "0.5" }}
+                    style={
+                        diceCounter > 2
+                            ? {}
+                            : { pointerEvents: "none", opacity: "0.5" }
+                    }
                 ></img>
             </div>
         </div>
