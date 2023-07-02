@@ -1,0 +1,19 @@
+.container {
+    position: relative;
+    height: 100%;
+}
+.container div:nth-child(1){
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+.container div:nth-child(2){
+    position: absolute;
+    top: 19px;
+    left: 19px;
+}
+.container div:nth-child(3){
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}

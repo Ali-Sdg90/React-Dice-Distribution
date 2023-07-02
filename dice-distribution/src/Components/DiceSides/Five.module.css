@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    padding: 1px;
+}
+.container span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container span:nth-child(1){
+    justify-content: space-between;
+}
+.container span:nth-child(2){
+    justify-content: center;
+}
+.container span:nth-child(3){
+    justify-content: space-between;
+}
