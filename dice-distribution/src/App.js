@@ -14,12 +14,12 @@ const App = () => {
     const [stepCounter, setStepCounter] = useState(10);
 
     const [diceCounter, setDiceCounter] = useState(22);
-
-    let diceNumSum = 0;
+    const [diceNumSum, setDiceNumSum] = useState(0);
 
     useEffect(() => {
         if (step < stepCounter) {
             const timeout = setTimeout(() => {
+                console.log(step); // Add console.log to see each rerender
                 setStep((prevStep) => prevStep + 1);
             }, 100);
 
@@ -32,13 +32,14 @@ const App = () => {
             <AppContext.Provider
                 value={{
                     diceNumSum,
+                    setDiceNumSum,
                     step,
                     diceCounter,
                     setDiceCounter,
                 }}
             >
                 <Header />
-                <ControlPanel />
+                <ControlPanel step={step}/>
                 <DiceSum />
                 <Chart />
                 <button onClick={() => setStep(1)}>Start</button>

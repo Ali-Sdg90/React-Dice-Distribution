@@ -8,14 +8,15 @@ import downArrow from "../svg/down-arrow.svg";
 
 import { AppContext } from "../App";
 
-const ContolPanel = () => {
+const ContolPanel = (props) => {
     const { diceCounter, setDiceCounter } = useContext(AppContext);
 
     return (
         <div className={Styles.container}>
+            {console.log("Y")}
             <div>Steps</div>
             <div className={Styles.dicesDiv}>
-                <Dices diceCounter={diceCounter} />
+                <Dices diceCounter={diceCounter} step={props.step} />
             </div>
             <div>
                 <img
