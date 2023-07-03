@@ -1,15 +1,12 @@
 .container {
-    border: 2px solid red;
+    outline: 2px solid rgb(31, 31, 31);
     width: 1200px;
     border-radius: 10px;
     height: 250px;
     display: grid;
     margin: auto;
-    grid-template-columns: 10% 80% 10%;
-}
-
-.container > div {
-    border: 1px solid rgb(166, 255, 0);
+    grid-template-columns: 12% 76% 12%;
+    background: #333;
 }
 
 .container .dicesDiv {
@@ -42,6 +39,70 @@
     background: rgb(255, 81, 110);
     transform: scale(0.95);
 }
-.container img::selection{
+.container img::selection {
     background: transparent;
+}
+
+.container > div:nth-child(1) {
+    letter-spacing: 0.5px;
+    font-size: 18px;
+}
+.container > div:nth-child(1) h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(31, 31, 31);
+    padding: 5px;
+}
+.container > div:nth-child(1) > div {
+    padding: 10px 5px;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+}
+.container > div:nth-child(1) div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > div:nth-child(1) div div:nth-child(1),
+.container > div:nth-child(1) div div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+.container input {
+    width: 60px;
+    padding: 2px 0 2px 4px;
+    font-size: 18px;
+    background: rgb(171, 171, 171);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.container > div:nth-child(3) {
+    position: relative;
+}
+.container .diceCounter {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    opacity: 0.4;
+    cursor: default;
+    transition: opacity 0.1s;
+}
+.container .diceCounter:hover{
+    opacity: 0.6;
+
+}
+.container .diceCounter div:nth-child(2) {
+    background: rgb(36, 36, 36);
+    padding: 2px 4px;
+    /* opacity: 0.6; */
+    /* border: 1px solid red; */
+    border-radius: 5px;
 }

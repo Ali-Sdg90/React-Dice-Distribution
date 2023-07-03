@@ -23,53 +23,68 @@ const ContolPanel = (props) => {
         if (event.target.checked) {
             setStepCounter(Infinity);
         } else {
-            setTimeout(() => {
-                setStepCounter(stepCounter);
-            }, 100);
+            setStepCounter(20);
         }
     };
 
     return (
         <div className={Styles.container}>
             <div>
+                <h3>Setting</h3>
                 <div>
-                    <span for="stepInp">Step: </span>
-                    <input
-                        type="number"
-                        id="stepInp"
-                        autoComplete="off"
-                        value={stepCounter}
-                        onChange={(event) => setStepCounter(event.target.value)}
-                    ></input>
-                </div>
-                <div>
-                    <label for="delayInp">Delay: </label>
-                    <input
-                        type="number"
-                        id="delayInp"
-                        autoComplete="off"
-                        value={delay}
-                        onChange={(event) => setDelay(event.target.value)}
-                    ></input>
-                </div>
-                <div>
-                    <label for="infinitInp">Infinit </label>
-                    <input
-                        type="checkbox"
-                        id="infinitInp"
-                        onChange={(event) => infinitCheckBox(event)}
-                    ></input>
-                </div>
-                <div>
-                    <span>{stepCounter}</span>
-                    <span>/</span>
-                    <span>{step}</span>
+                    <div>
+                        <span for="stepInp">Step: </span>
+                        <input
+                            type="number"
+                            id="stepInp"
+                            autoComplete="off"
+                            value={stepCounter}
+                            onChange={(event) =>
+                                setStepCounter(event.target.value)
+                            }
+                            style={
+                                stepCounter === Infinity
+                                    ? { pointerEvents: "none", opacity: "0.5" }
+                                    : {}
+                            }
+                        ></input>
+                    </div>
+                    <div>
+                        <label for="delayInp">Delay: </label>
+                        <input
+                            type="number"
+                            id="delayInp"
+                            autoComplete="off"
+                            value={delay}
+                            onChange={(event) => setDelay(event.target.value)}
+                        ></input>
+                    </div>
+                    <br></br>
+                    <div>
+                        <label for="infinitInp">Infinit Mode</label>
+                        <input
+                            type="checkbox"
+                            id="infinitInp"
+                            onChange={(event) => infinitCheckBox(event)}
+                        ></input>
+                    </div>
+                    <br></br>
+                    <div>Remaining</div>
+                    <div>
+                        <span>{stepCounter}</span>
+                        <span>&nbsp;/&nbsp;</span>
+                        <span>{step}</span>
+                    </div>
                 </div>
             </div>
             <div className={Styles.dicesDiv}>
                 <Dices diceCounter={diceCounter} step={props.step} />
             </div>
             <div>
+                <div className={Styles.diceCounter}>
+                    <div>Number of Dises</div>
+                    <div>{diceCounter}</div>
+                </div>
                 <img
                     src={upArrow}
                     alt="upArrow"
