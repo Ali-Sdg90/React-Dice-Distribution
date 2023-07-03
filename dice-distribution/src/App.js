@@ -20,7 +20,6 @@ const App = () => {
     useEffect(() => {
         if (step < stepCounter) {
             const timeout = setTimeout(() => {
-                console.log(step); // Add console.log to see each rerender
                 setStep((prevStep) => prevStep + 1);
             }, delay);
 
