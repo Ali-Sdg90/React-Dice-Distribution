@@ -15,13 +15,14 @@ const App = () => {
 
     const [diceCounter, setDiceCounter] = useState(22);
     const [diceNumSum, setDiceNumSum] = useState(0);
+    const [delay, setDelay] = useState(50);
 
     useEffect(() => {
         if (step < stepCounter) {
             const timeout = setTimeout(() => {
                 console.log(step); // Add console.log to see each rerender
                 setStep((prevStep) => prevStep + 1);
-            }, 100);
+            }, delay);
 
             return () => clearTimeout(timeout);
         }
@@ -34,12 +35,16 @@ const App = () => {
                     diceNumSum,
                     setDiceNumSum,
                     step,
+                    stepCounter,
+                    setStepCounter,
                     diceCounter,
                     setDiceCounter,
+                    delay,
+                    setDelay,
                 }}
             >
                 <Header />
-                <ControlPanel step={step}/>
+                <ControlPanel step={step} />
                 <DiceSum />
                 <Chart />
                 <button onClick={() => setStep(1)}>Start</button>
