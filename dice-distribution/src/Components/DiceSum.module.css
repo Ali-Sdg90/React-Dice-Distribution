@@ -1,3 +1,26 @@
-.container{
-    
+.container {
+    /* border: 1px solid red; */
+    margin: 10px auto;
+    display: flex;
+    padding: 5px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    background-color:#333 ;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #333;
+}
+
+.container div {
+    /* border: 1px solid yellow; */
+    text-align: center;
+    font-size: 30px;
+    width: 140px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.container div span:first-child{
+    letter-spacing: 2px;
 }

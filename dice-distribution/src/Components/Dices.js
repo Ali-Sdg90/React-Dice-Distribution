@@ -27,7 +27,7 @@ const Dices = () => {
     return (
         <div className={`${Styles.container} ${Styles.gridTemplate}`}>
             {dices}
-            <span>{diceNumSum}</span>
+            {/* <span>{diceNumSum}</span> */}
         </div>
     );
 };

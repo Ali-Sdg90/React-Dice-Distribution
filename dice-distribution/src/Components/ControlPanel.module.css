@@ -6,8 +6,6 @@
     display: grid;
     margin: auto;
     grid-template-columns: 10% 80% 10%;
-
-    /* overflow: hidden; */
 }
 
 .container > div {

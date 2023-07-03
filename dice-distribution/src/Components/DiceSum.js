@@ -9,7 +9,10 @@ const DiceSum = () => {
 
     return (
         <div className={Styles.container}>
-            <div>{diceNumSum}</div>
+            <div>
+                <span>Sum: </span>
+                <span>{diceNumSum}</span>
+            </div>
         </div>
     );
 };

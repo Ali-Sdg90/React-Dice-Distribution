@@ -13,7 +13,6 @@ const ContolPanel = (props) => {
 
     return (
         <div className={Styles.container}>
-            {console.log("Y")}
             <div>Steps</div>
             <div className={Styles.dicesDiv}>
                 <Dices diceCounter={diceCounter} step={props.step} />
