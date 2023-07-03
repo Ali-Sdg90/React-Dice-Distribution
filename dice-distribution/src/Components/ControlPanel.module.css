@@ -55,19 +55,38 @@
     padding: 5px;
 }
 .container > div:nth-child(1) > div {
-    padding: 10px 5px;
+    padding: 10px 0 3px;
     display: grid;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-rows: 1fr 2fr 5fr 1fr 1fr;
+    height: 215px;
 }
 .container > div:nth-child(1) div div {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 5px 0 7px;
 }
 .container > div:nth-child(1) div div:nth-child(1),
 .container > div:nth-child(1) div div:nth-child(2) {
     display: flex;
     justify-content: space-between;
+}
+.container > div:nth-child(1) div div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+}
+.container > div:nth-child(1) div div:nth-child(3) label{
+    /* border: 1px solid red; */
+    /* font-size: 18px; */
+}
+.container > div:nth-child(1) div div:nth-child(3) input{
+    width: 14px;
+    border: 1px solid blue;
+    margin-right: 7px;
+}
+.container > div:nth-child(1) > div div:nth-child(4) {
+    padding-top: 3px;
+    border-top: 1px solid rgb(31, 31, 31);
 }
 .container input {
     width: 60px;
@@ -83,7 +102,7 @@
 }
 .container .diceCounter {
     position: absolute;
-    top: 5px;
+    top: 7px;
     left: 0;
     width: 100%;
     display: flex;
@@ -95,9 +114,8 @@
     cursor: default;
     transition: opacity 0.1s;
 }
-.container .diceCounter:hover{
+.container .diceCounter:hover {
     opacity: 0.6;
-
 }
 .container .diceCounter div:nth-child(2) {
     background: rgb(36, 36, 36);

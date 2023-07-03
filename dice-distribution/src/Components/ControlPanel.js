@@ -59,7 +59,6 @@ const ContolPanel = (props) => {
                             onChange={(event) => setDelay(event.target.value)}
                         ></input>
                     </div>
-                    <br></br>
                     <div>
                         <label for="infinitInp">Infinit Mode</label>
                         <input
@@ -68,7 +67,6 @@ const ContolPanel = (props) => {
                             onChange={(event) => infinitCheckBox(event)}
                         ></input>
                     </div>
-                    <br></br>
                     <div>Remaining</div>
                     <div>
                         <span>{stepCounter}</span>
