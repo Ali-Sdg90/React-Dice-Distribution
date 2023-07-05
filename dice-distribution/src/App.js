@@ -13,7 +13,7 @@ const App = () => {
     const [step, setStep] = useState(10);
     const [stepCounter, setStepCounter] = useState(10);
 
-    const [diceCounter, setDiceCounter] = useState(22);
+    const [diceCounter, setDiceCounter] = useState(20);
     const [diceNumSum, setDiceNumSum] = useState(0);
     const [delay, setDelay] = useState(50);
 
@@ -26,6 +26,10 @@ const App = () => {
             return () => clearTimeout(timeout);
         }
     }, [step, stepCounter]);
+
+    useEffect(() => {
+        setStep(1);
+    }, [diceCounter]);
 
     return (
         <div className={Styles.container}>
@@ -45,7 +49,9 @@ const App = () => {
                 <Header />
                 <ControlPanel step={step} />
                 <DiceSum />
-                <Chart />
+                {diceCounter % 2 === 0 ? <Chart /> : ""}
+                {diceCounter % 2 !== 0 ? <Chart /> : ""}
+
                 <button onClick={() => setStep(1)}>Start</button>
                 {/* <Footer /> */}
             </AppContext.Provider>
