@@ -17,7 +17,7 @@ const ContolPanel = (props) => {
         setStepCounter,
         delay,
         setDelay,
-        sumStepCounter,
+        totalSteps,
     } = useContext(AppContext);
 
     const infinitCheckBox = (event) => {
@@ -86,11 +86,15 @@ const ContolPanel = (props) => {
                             onChange={(event) => infinitCheckBox(event)}
                         ></input>
                     </div>
+                    <div>
+                        <span>Iteration :</span>
+                        <span>{totalSteps}</span>
+                    </div>
                     <div>Remaining</div>
                     <div>
-                        <span>{sumStepCounter[1]}</span>
+                        <span>{stepCounter}</span>
                         <span>&nbsp;/&nbsp;</span>
-                        <span>{sumStepCounter[0] + step}</span>
+                        <span>{step}</span>
                     </div>
                 </div>
             </div>

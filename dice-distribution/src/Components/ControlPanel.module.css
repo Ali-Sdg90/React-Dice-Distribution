@@ -59,8 +59,9 @@
 .container > div:nth-child(1) > div {
     padding: 10px 0 3px;
     display: grid;
-    grid-template-rows: 1fr 2fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr 2.5fr 5fr 2fr 1fr 1fr;
     height: 215px;
+    color: rgba(255, 255, 255, 0.8);
 }
 .container > div:nth-child(1) div div {
     display: flex;
@@ -82,7 +83,7 @@
     border: 1px solid blue;
     margin-right: 7px;
 }
-.container > div:nth-child(1) > div div:nth-child(4) {
+.container > div:nth-child(1) > div div:nth-child(5) {
     padding-top: 3px;
     border-top: 1px solid rgb(31, 31, 31);
 }
