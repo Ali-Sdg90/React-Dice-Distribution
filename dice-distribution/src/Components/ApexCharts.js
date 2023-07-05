@@ -4,14 +4,13 @@ import Chart from "react-apexcharts";
 import { AppContext } from "../App";
 
 const ApexCharts = () => {
-    const { diceNumSum, diceCounter } = useContext(AppContext);
+    const { diceNumSum, diceCounter, step } = useContext(AppContext);
 
-    const emptyPlaceholderMaker = () => {
-        let emptyPlaceholder = [];
-        for (let i = diceCounter * 3; i < diceCounter * 5; i++) {
-            emptyPlaceholder.push(i);
-        }
-        return emptyPlaceholder;
+    const generateCategories = (start, end) => {
+        return Array.from(
+            { length: end - start + 1 },
+            (_, index) => start + index
+        );
     };
 
     const [options, setOptions] = useState({
@@ -19,22 +18,22 @@ const ApexCharts = () => {
             id: "dice-distribution",
         },
         xaxis: {
-            categories: emptyPlaceholderMaker(),
+            categories: [],
         },
     });
 
     const [series, setSeries] = useState([
         {
             name: "series-1",
-            data: emptyPlaceholderMaker(),
+            data: [],
         },
     ]);
 
     useEffect(() => {
-        let newCategories = [];
-        for (let i = diceCounter * 3; i < diceCounter * 5; i++) {
-            newCategories.push(i);
-        }
+        const minDiceNumSum = Math.floor(1 * diceCounter);
+        const maxDiceNumSum = Math.floor(6 * diceCounter);
+
+        const newCategories = generateCategories(minDiceNumSum, maxDiceNumSum);
         setOptions((prevOptions) => ({
             ...prevOptions,
             xaxis: {
@@ -42,20 +41,37 @@ const ApexCharts = () => {
                 categories: newCategories,
             },
         }));
-        setSeries([
+        setSeries((prevSeries) => [
             {
-                ...series[0],
-                data: emptyPlaceholderMaker(),
+                ...prevSeries[0],
+                data: Array(maxDiceNumSum - minDiceNumSum + 1).fill(0),
             },
         ]);
     }, [diceCounter]);
+
+    useEffect(() => {
+        setSeries((prevSeries) => {
+            const updatedData = [...prevSeries[0].data];
+            const minDiceNumSum = Math.floor(2.8 * diceCounter);
+            const index = diceNumSum - minDiceNumSum;
+            if (index >= 0 && index < updatedData.length) {
+                updatedData[index] += 1;
+            }
+            return [
+                {
+                    ...prevSeries[0],
+                    data: updatedData,
+                },
+            ];
+        });
+    }, [diceNumSum, diceCounter]);
 
     return (
         <div className={Styles.container}>
             <Chart
                 options={options}
                 series={series}
-                type="bar"
+                type="line" // radar - line(TB) - area - bar
                 width={1150}
                 height={220}
             />
