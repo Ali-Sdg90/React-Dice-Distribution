@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import Styles from "./ControlPanel.module.css";
 import Dices from "./Dices";
@@ -17,6 +17,7 @@ const ContolPanel = (props) => {
         setStepCounter,
         delay,
         setDelay,
+        sumStepCounter,
     } = useContext(AppContext);
 
     const infinitCheckBox = (event) => {
@@ -38,10 +39,18 @@ const ContolPanel = (props) => {
                             type="number"
                             id="stepInp"
                             autoComplete="off"
+                            step="1"
+                            min="1"
                             value={stepCounter}
-                            onChange={(event) =>
-                                setStepCounter(event.target.value)
-                            }
+                            onChange={(event) => {
+                                const inputValue = parseInt(
+                                    event.target.value,
+                                    10
+                                );
+                                if (!isNaN(inputValue) && inputValue > 0) {
+                                    setStepCounter(inputValue);
+                                }
+                            }}
                             style={
                                 stepCounter === Infinity
                                     ? { pointerEvents: "none", opacity: "0.5" }
@@ -54,9 +63,19 @@ const ContolPanel = (props) => {
                         <input
                             type="number"
                             id="delayInp"
+                            step="1"
+                            // min="0"
                             autoComplete="off"
                             value={delay}
-                            onChange={(event) => setDelay(event.target.value)}
+                            onChange={(event) => {
+                                const inputValue = parseInt(
+                                    event.target.value,
+                                    10
+                                );
+                                if (!isNaN(inputValue) && inputValue > 0) {
+                                    setDelay(event.target.value);
+                                }
+                            }}
                         ></input>
                     </div>
                     <div>
@@ -69,9 +88,9 @@ const ContolPanel = (props) => {
                     </div>
                     <div>Remaining</div>
                     <div>
-                        <span>{stepCounter}</span>
+                        <span>{sumStepCounter[1]}</span>
                         <span>&nbsp;/&nbsp;</span>
-                        <span>{step}</span>
+                        <span>{sumStepCounter[0] + step}</span>
                     </div>
                 </div>
             </div>
