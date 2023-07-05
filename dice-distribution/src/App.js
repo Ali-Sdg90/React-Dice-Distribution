@@ -4,7 +4,6 @@ import Styles from "./App.module.css";
 import Chart from "./Components/Chart";
 import ControlPanel from "./Components/ControlPanel";
 import DiceSum from "./Components/DiceSum";
-import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 
 export const AppContext = React.createContext();
@@ -15,7 +14,7 @@ const App = () => {
 
     const [diceCounter, setDiceCounter] = useState(20);
     const [diceNumSum, setDiceNumSum] = useState(0);
-    const [delay, setDelay] = useState(50);
+    const [delay, setDelay] = useState(300);
 
     useEffect(() => {
         if (step < stepCounter) {
@@ -53,7 +52,6 @@ const App = () => {
                 {diceCounter % 2 !== 0 ? <Chart /> : ""}
 
                 <button onClick={() => setStep(1)}>Start</button>
-                {/* <Footer /> */}
             </AppContext.Provider>
         </div>
     );

@@ -1,5 +1,4 @@
 .container {
-    /* border: 1px solid red; */
     margin: 10px auto;
     display: flex;
     padding: 5px;
@@ -9,11 +8,10 @@
     width: 160px;
     background-color:#333 ;
     border-radius: 5px;
-    box-shadow: 0 0 2px #333;
+    box-shadow: 0 0 2px rgba(24, 24, 24, 0.4);
 }
 
 .container div {
-    /* border: 1px solid yellow; */
     text-align: center;
     font-size: 30px;
     width: 140px;

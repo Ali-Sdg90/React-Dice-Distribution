@@ -111,6 +111,19 @@ const ContolPanel = (props) => {
                             : { pointerEvents: "none", opacity: "0.5" }
                     }
                 ></img>
+                <div className={Styles.minMax}>
+                    <div>
+                        <span>
+                            Min: <span>{diceCounter}</span>
+                        </span>
+                        <span>
+                            Max: <span>{diceCounter * 6}</span>
+                        </span>
+                    </div>
+                    <div>
+                        Avg: <span>{diceCounter * 3.5}</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
