@@ -7,9 +7,15 @@ import { BrowserRouter } from "react-router-dom";
 
 const setScale = () => {
     // return `scale(1)`;
-
-    const scale = (window.innerHeight * 0.97) / 713.6;
-    return `scale(${scale})`;
+    let scale = 0;
+    if (window.innerHeight < window.innerWidth) {
+        scale = (window.innerHeight * 0.97) / 713.6;
+        return `scale(${scale})`;
+    } else {
+        console.log("oewg")
+        scale = (window.innerWidth * 0.97) / 713.6;
+        return `scale(${scale}) rotate(90deg)`;
+    }
 };
 
 ReactDOM.render(
@@ -22,10 +28,3 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById("root")
 );
-
-// ReactDOM.render(
-//     <BrowserRouter>
-//         <App />
-//     </BrowserRouter>,
-//     document.getElementById("root")
-// );

@@ -11,7 +11,6 @@ export const AppContext = React.createContext();
 const App = () => {
     const [step, setStep] = useState(10);
     const [stepCounter, setStepCounter] = useState(10);
-
     const [diceCounter, setDiceCounter] = useState(20);
     const [diceNumSum, setDiceNumSum] = useState(0);
     const [delay, setDelay] = useState(300);
@@ -22,6 +21,9 @@ const App = () => {
         if (step <= stepCounter) {
             setTotalSteps((prevState) => prevState + 1);
         }
+    }, [step]);
+
+    useEffect(() => {
         if (count && step < stepCounter) {
             const timeout = setTimeout(() => {
                 setStep((prevStep) => prevStep + 1);
@@ -49,14 +51,16 @@ const App = () => {
                     delay,
                     setDelay,
                     totalSteps,
+                    setTotalSteps,
                 }}
             >
                 <Header />
                 <ControlPanel step={step} />
                 <DiceSum />
+
                 {diceCounter % 2 === 0 ? <Chart /> : ""}
                 {diceCounter % 2 !== 0 ? <Chart /> : ""}
-
+                
                 <button
                     onClick={() => {
                         setStep(1);

@@ -8,7 +8,7 @@ const generateCategories = (start, end) => {
 };
 
 const ApexCharts = () => {
-    const { diceNumSum, diceCounter, step } = useContext(AppContext);
+    const { diceNumSum, diceCounter } = useContext(AppContext);
 
     const [options, setOptions] = useState(() => ({
         chart: {
@@ -45,7 +45,6 @@ const ApexCharts = () => {
                 data: Array(maxDiceNumSum - minDiceNumSum + 1).fill(0),
             },
         ]);
-
     }, [diceCounter]);
 
     useEffect(() => {
@@ -63,7 +62,6 @@ const ApexCharts = () => {
                 },
             ];
         });
-
     }, [diceNumSum]);
 
     return (

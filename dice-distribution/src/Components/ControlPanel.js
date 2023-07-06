@@ -18,6 +18,7 @@ const ContolPanel = (props) => {
         delay,
         setDelay,
         totalSteps,
+        setTotalSteps,
     } = useContext(AppContext);
 
     const infinitCheckBox = (event) => {
@@ -64,7 +65,7 @@ const ContolPanel = (props) => {
                             type="number"
                             id="delayInp"
                             step="1"
-                            // min="0"
+                            min="0"
                             autoComplete="off"
                             value={delay}
                             onChange={(event) => {
@@ -72,7 +73,7 @@ const ContolPanel = (props) => {
                                     event.target.value,
                                     10
                                 );
-                                if (!isNaN(inputValue) && inputValue > 0) {
+                                if (!isNaN(inputValue) && inputValue >= 0) {
                                     setDelay(event.target.value);
                                 }
                             }}
@@ -87,7 +88,7 @@ const ContolPanel = (props) => {
                         ></input>
                     </div>
                     <div>
-                        <span>Iteration :</span>
+                        <span>Iteration: </span>
                         <span>{totalSteps}</span>
                     </div>
                     <div>Remaining</div>
@@ -98,9 +99,11 @@ const ContolPanel = (props) => {
                     </div>
                 </div>
             </div>
+
             <div className={Styles.dicesDiv}>
                 <Dices diceCounter={diceCounter} step={props.step} />
             </div>
+
             <div>
                 <div className={Styles.diceCounter}>
                     <div>Number of Dises</div>
@@ -109,11 +112,12 @@ const ContolPanel = (props) => {
                 <img
                     src={upArrow}
                     alt="upArrow"
-                    onClick={() =>
+                    onClick={() => {
                         setDiceCounter((prevState) =>
                             prevState < 30 ? prevState + 1 : prevState
-                        )
-                    }
+                        );
+                        setTotalSteps(0);
+                    }}
                     style={
                         diceCounter < 30
                             ? {}
@@ -123,11 +127,12 @@ const ContolPanel = (props) => {
                 <img
                     src={downArrow}
                     alt="downArrow"
-                    onClick={() =>
+                    onClick={() => {
                         setDiceCounter((prevState) =>
                             prevState > 2 ? prevState - 1 : prevState
-                        )
-                    }
+                        );
+                        setTotalSteps(0);
+                    }}
                     style={
                         diceCounter > 2
                             ? {}

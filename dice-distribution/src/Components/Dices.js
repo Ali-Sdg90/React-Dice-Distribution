@@ -6,8 +6,7 @@ import Styles from "./Dices.module.css";
 import { AppContext } from "../App";
 
 const Dices = () => {
-    const { diceNumSum, setDiceNumSum, diceCounter, step } =
-        useContext(AppContext);
+    const { setDiceNumSum, diceCounter, step } = useContext(AppContext);
     const [dices, setDices] = useState([]);
 
     useEffect(() => {
@@ -25,9 +24,9 @@ const Dices = () => {
     }, [diceCounter, setDiceNumSum, step]);
 
     return (
-        <div className={`${Styles.container} ${Styles.gridTemplate}`}>
+        <div className={Styles.container}>
+            {/* Hello :) */}
             {dices}
-            {/* <span>{diceNumSum}</span> */}
         </div>
     );
 };

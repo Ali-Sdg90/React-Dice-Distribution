@@ -7,7 +7,3 @@
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
 }
-
-/* .gridTemplate{
-    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
-} */

@@ -5,8 +5,8 @@ import Styles from "./Dice.module.css";
 import One from "./DiceSides/One";
 import Two from "./DiceSides/Two";
 import Three from "./DiceSides/Three";
-import Five from "./DiceSides/Five";
 import Four from "./DiceSides/Four";
+import Five from "./DiceSides/Five";
 import Six from "./DiceSides/Six";
 
 const Dice = (props) => {
@@ -22,19 +22,13 @@ const Dice = (props) => {
                 return <Four />;
             case 5:
                 return <Five />;
-            case 6:
+            default:
                 return <Six />;
         }
     };
     return (
         <div className={Styles.container}>
             {/* <p>{props.diceNumber}</p> */}
-            {/* <One /> */}
-            {/* <Two /> */}
-            {/* <Three /> */}
-            {/* <Four /> */}
-            {/* <Five /> */}
-            {/* <Six /> */}
             {whichSide()}
         </div>
     );
