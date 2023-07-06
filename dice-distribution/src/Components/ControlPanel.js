@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 import Styles from "./ControlPanel.module.css";
 import Dices from "./Dices";
@@ -25,7 +25,7 @@ const ContolPanel = (props) => {
         if (event.target.checked) {
             setStepCounter(Infinity);
         } else {
-            setStepCounter(20);
+            setStepCounter(10);
         }
     };
 

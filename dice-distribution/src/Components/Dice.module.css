@@ -1,8 +1,8 @@
 .container{
     width: 60px;
     height: 60px;
-    outline: 1px solid rgb(47, 0, 255);
-    border: 1px solid rgb(36, 0, 198);
+    border: 0.2px solid rgba(255, 255, 255, 0.1);
+    outline: 1px solid rgb(49, 14, 205);
     outline-offset: 1px;
     background-color: rgb(19, 38, 118);
     border-radius: 5px;

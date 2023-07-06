@@ -47,14 +47,24 @@
 
 .container > div:nth-child(1) {
     letter-spacing: 0.5px;
-    font-size: 18px;
+    font-size: 17px;
+    font-family: sans-serif;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+}
+.container > div:nth-child(1):hover {
+    transition: opacity 0.1s;
+    opacity: 1;
 }
 .container > div:nth-child(1) h3 {
+    font-family: serif;
+    font-size: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgb(31, 31, 31);
     padding: 5px;
+    letter-spacing: 1px;
 }
 .container > div:nth-child(1) > div {
     padding: 10px 0 3px;
@@ -80,7 +90,7 @@
 }
 .container > div:nth-child(1) div div:nth-child(3) input {
     width: 14px;
-    margin-right: 7px;
+    margin: 0 7px 2px;
 }
 .container > div:nth-child(1) > div div:nth-child(5) {
     padding-top: 3px;
