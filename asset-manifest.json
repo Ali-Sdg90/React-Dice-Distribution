@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-Dice-Distribution/static/css/main.57394b00.css",
-    "main.js": "/React-Dice-Distribution/static/js/main.76c167b7.js",
+    "main.css": "/React-Dice-Distribution/static/css/main.fee73ff2.css",
+    "main.js": "/React-Dice-Distribution/static/js/main.0533e8e9.js",
     "static/media/up-arrow.svg": "/React-Dice-Distribution/static/media/up-arrow.f43a0e2f34d83a123c584468b69d37bb.svg",
     "static/media/down-arrow.svg": "/React-Dice-Distribution/static/media/down-arrow.b92c1e23905c05597c5c4dfc75c78b13.svg",
     "index.html": "/React-Dice-Distribution/index.html",
-    "main.57394b00.css.map": "/React-Dice-Distribution/static/css/main.57394b00.css.map",
-    "main.76c167b7.js.map": "/React-Dice-Distribution/static/js/main.76c167b7.js.map"
+    "main.fee73ff2.css.map": "/React-Dice-Distribution/static/css/main.fee73ff2.css.map",
+    "main.0533e8e9.js.map": "/React-Dice-Distribution/static/js/main.0533e8e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.57394b00.css",
-    "static/js/main.76c167b7.js"
+    "static/css/main.fee73ff2.css",
+    "static/js/main.0533e8e9.js"
   ]
 }
