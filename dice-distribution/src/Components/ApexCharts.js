@@ -21,7 +21,7 @@ const ApexCharts = () => {
 
     const [series, setSeries] = useState(() => [
         {
-            name: "series-1",
+            name: "Number of repetitions",
             data: [],
         },
     ]);

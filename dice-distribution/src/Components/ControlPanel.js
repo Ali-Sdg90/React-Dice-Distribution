@@ -35,7 +35,7 @@ const ContolPanel = (props) => {
                 <h3>Setting</h3>
                 <div>
                     <div>
-                        <span for="stepInp">Step: </span>
+                        <label for="stepInp">Step: </label>
                         <input
                             type="number"
                             id="stepInp"

@@ -1,3 +1,26 @@
-.container{
-    color: white !important;
+.container {
+    width: 1200px;
+    height: 230px;
+    margin: 0 auto 0;
+    display: block;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    background-color: rgb(23, 23, 23);
+    box-shadow: 0 0 5px rgb(23, 23, 23);
+}
+.container div{
+    background: rgb(38, 38, 38);
+    color: white;
+}
+.container div:nth-child(1){
+    background: transparent;
+}
+.container div:nth-child(1) div div:nth-child(1) {
+    color: gray;
+}
+.container div:nth-child(2) div div:nth-child(1){
+    color: white;
 }

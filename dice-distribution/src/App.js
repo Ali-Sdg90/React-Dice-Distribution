@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Styles from "./App.module.css";
 
-import Chart from "./Components/Chart";
+import ApexCharts from "./Components/ApexCharts";
 import ControlPanel from "./Components/ControlPanel";
 import DiceSum from "./Components/DiceSum";
 import Header from "./Components/Header";
@@ -58,9 +58,9 @@ const App = () => {
                 <ControlPanel step={step} />
                 <DiceSum />
 
-                {diceCounter % 2 === 0 ? <Chart /> : ""}
-                {diceCounter % 2 !== 0 ? <Chart /> : ""}
-                
+                {diceCounter % 2 === 0 ? <ApexCharts /> : ""}
+                {diceCounter % 2 !== 0 ? <ApexCharts /> : ""}
+
                 <button
                     onClick={() => {
                         setStep(1);

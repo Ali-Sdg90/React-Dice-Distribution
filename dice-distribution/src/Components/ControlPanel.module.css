@@ -47,17 +47,19 @@
 
 .container > div:nth-child(1) {
     letter-spacing: 0.5px;
-    font-size: 17px;
-    font-family: sans-serif;
     opacity: 0.9;
     transition: opacity 0.5s;
+    font-size: 18px;
+}
+.container > div:nth-child(1) label {
+    font-size: 17px;
+    font-family: sans-serif;
 }
 .container > div:nth-child(1):hover {
     transition: opacity 0.1s;
     opacity: 1;
 }
 .container > div:nth-child(1) h3 {
-    font-family: serif;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -106,7 +108,7 @@
 
 .container input {
     width: 60px;
-    padding: 2px 2px 2px 4px;
+    padding: 2px 2px 1px 4px;
     font-size: 18px;
     background-color: rgb(171, 171, 171);
     border: 1px solid black;

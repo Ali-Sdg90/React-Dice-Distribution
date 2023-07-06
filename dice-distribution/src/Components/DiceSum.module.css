@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     width: 160px;
-    background-color:#333 ;
+    background-color: #333;
     border-radius: 5px;
     box-shadow: 0 0 2px rgba(24, 24, 24, 0.4);
 }
@@ -19,6 +19,6 @@
     grid-template-columns: 2fr 1fr;
 }
 
-.container div span:first-child{
+.container div span:first-child {
     letter-spacing: 2px;
 }
