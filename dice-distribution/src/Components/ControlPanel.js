@@ -19,6 +19,7 @@ const ContolPanel = (props) => {
         setDelay,
         totalSteps,
         setTotalSteps,
+        setCount,
     } = useContext(AppContext);
 
     const infinitCheckBox = (event) => {
@@ -126,6 +127,7 @@ const ContolPanel = (props) => {
                             prevState < 30 ? prevState + 1 : prevState
                         );
                         setTotalSteps(0);
+                        setCount(true); // Force...
                     }}
                     style={
                         diceCounter < 30
@@ -141,6 +143,7 @@ const ContolPanel = (props) => {
                             prevState > 2 ? prevState - 1 : prevState
                         );
                         setTotalSteps(0);
+                        setCount(true); // Force...
                     }}
                     style={
                         diceCounter > 2

@@ -55,6 +55,7 @@ const App = () => {
                     setDelay,
                     totalSteps,
                     setTotalSteps,
+                    setCount,
                 }}
             >
                 <Header />
