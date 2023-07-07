@@ -1,13 +1,5 @@
-<h1>React-Dice-Distribution</h1>
-<p>
-    <a
-        href="https://github.com/ali-sdg90/React-Dice-Distribution/blob/main/LICENSE"
-        target="_new"
-        ><img
-            src="https://img.shields.io/badge/license-MIT-blue.svg"
-            alt="License"
-    /></a>
-</p>
+<h1>React-Dice-Distribution🎲</h1>
+<br/>
 <img src="Gifs/300Delay.gif" alt="app-showcase" />
 <h2>Overview</h2>
 <p>
@@ -66,6 +58,7 @@
     </li>
     <li>Dark theme for improved visual comfort</li>
 </ul>
+<hr />
 <img src="Gifs/Infinit-Mode.gif" alt="Infinit-Mode" />
 <h2>Installation</h2>
 <p>
@@ -169,15 +162,6 @@
         changes you made.
     </li>
 </ul>
-<p>
-    By contributing to React-Dice-Distribution, you agree that your
-    contributions will be licensed under the
-    <a
-        href="https://github.com/ali-sdg90/React-Dice-Distribution/blob/main/LICENSE"
-        target="_new"
-        >MIT License</a
-    >.
-</p>
 <p>
     Thank you for considering contributing to this project. Your help is greatly
     appreciated!
