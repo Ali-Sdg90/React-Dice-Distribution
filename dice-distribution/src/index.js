@@ -3,10 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import Styles from "./index.module.css";
-import { BrowserRouter } from "react-router-dom";
 
 const setScale = () => {
+    document.title = "Dice Distribution Showcase";
+
     // return `scale(1)`;
+
     let scale = 0;
     if (window.innerHeight < window.innerWidth) {
         scale = (window.innerHeight * 0.97) / 713.6;
@@ -19,12 +21,10 @@ const setScale = () => {
 };
 
 ReactDOM.render(
-    <BrowserRouter>
-        <div className={Styles.appScale}>
-            <div style={{ transform: setScale() }}>
-                <App />
-            </div>
+    <div className={Styles.appScale}>
+        <div style={{ transform: setScale() }}>
+            <App />
         </div>
-    </BrowserRouter>,
+    </div>,
     document.getElementById("root")
 );
