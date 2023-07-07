@@ -1,13 +1,5 @@
-<h1>React-Dice-Distribution</h1>
-<p>
-    <a
-        href="https://github.com/ali-sdg90/React-Dice-Distribution/blob/main/LICENSE"
-        target="_new"
-        ><img
-            src="https://img.shields.io/badge/license-MIT-blue.svg"
-            alt="License"
-    /></a>
-</p>
+<h1>React-Dice-Distribution🎲</h1>
+<br/>
 <img src="Gifs/300Delay.gif" alt="app-showcase" />
 <h2>Overview</h2>
 <p>
@@ -44,28 +36,22 @@
 <h2>Features</h2>
 <ul>
     <li>
-        Dynamic control panel allowing the adjustment of:
-        <ul>
-            <li>Number of dice (2 to 30)</li>
-            <li>Delay between dice deployments</li>
-            <li>Number of times dice are thrown in a step</li>
-            <li>Infinite Mode: Continuously rolling the dice</li>
-        </ul>
+        Dynamic control panel to adjust the number of dice, delay between deployments, and steps.
     </li>
     <li>
-        Responsive chart with the following capabilities:
-        <ul>
-            <li>Zooming functionality</li>
-            <li>Exporting the chart in SVG, PNG, or CSV formats</li>
-            <li>Smooth animations and transitions</li>
-        </ul>
+        Responsive chart with zooming functionality and export options (SVG, PNG, CSV).
     </li>
     <li>
-        Custom responsive design ensuring optimal user experience across
-        different devices
+        Smooth animations and transitions for an enhanced visualization experience.
     </li>
-    <li>Dark theme for improved visual comfort</li>
+    <li>
+        Custom responsive design for optimal usage on different devices.
+    </li>
+    <li>
+        Dark theme for improved visual comfort.
+    </li>
 </ul>
+<hr />
 <img src="Gifs/Infinit-Mode.gif" alt="Infinit-Mode" />
 <h2>Installation</h2>
 <p>
@@ -169,15 +155,6 @@
         changes you made.
     </li>
 </ul>
-<p>
-    By contributing to React-Dice-Distribution, you agree that your
-    contributions will be licensed under the
-    <a
-        href="https://github.com/ali-sdg90/React-Dice-Distribution/blob/main/LICENSE"
-        target="_new"
-        >MIT License</a
-    >.
-</p>
 <p>
     Thank you for considering contributing to this project. Your help is greatly
     appreciated!
