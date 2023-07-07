@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Styles from "./ControlPanel.module.css";
 import Dices from "./Dices";
@@ -28,6 +28,15 @@ const ContolPanel = (props) => {
             setStepCounter(10);
         }
     };
+
+    useEffect(() => {
+        setShowStep(step);
+    }, [step]);
+
+    const [showStep, setShowStep] = useState(5);
+    useEffect(() => {
+        setShowStep(0);
+    }, [stepCounter]);
 
     return (
         <div className={Styles.container}>
@@ -95,7 +104,7 @@ const ContolPanel = (props) => {
                     <div>
                         <span>{stepCounter}</span>
                         <span>&nbsp;/&nbsp;</span>
-                        <span>{step}</span>
+                        <span>{showStep}</span>
                     </div>
                 </div>
             </div>

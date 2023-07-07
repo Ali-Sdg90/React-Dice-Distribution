@@ -14,7 +14,6 @@ const setScale = () => {
         scale = (window.innerHeight * 0.97) / 713.6;
         return `scale(${scale})`;
     } else {
-        console.log("oewg");
         scale = (window.innerWidth * 0.97) / 713.6;
         return `scale(${scale}) rotate(90deg)`;
     }

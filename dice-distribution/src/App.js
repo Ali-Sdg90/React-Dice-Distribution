@@ -9,7 +9,7 @@ import Header from "./Components/Header";
 export const AppContext = React.createContext();
 
 const App = () => {
-    const [step, setStep] = useState(10);
+    const [step, setStep] = useState(0);
     const [stepCounter, setStepCounter] = useState(10);
     const [diceCounter, setDiceCounter] = useState(20);
     const [diceNumSum, setDiceNumSum] = useState(0);
@@ -18,6 +18,9 @@ const App = () => {
     const [totalSteps, setTotalSteps] = useState(-1);
 
     useEffect(() => {
+        if (step === stepCounter) {
+            setCount(false);
+        }
         if (step <= stepCounter) {
             setTotalSteps((prevState) => prevState + 1);
         }
@@ -31,7 +34,7 @@ const App = () => {
 
             return () => clearTimeout(timeout);
         }
-    }, [step, stepCounter]);
+    }, [step, stepCounter, count]);
 
     useEffect(() => {
         setStep(1);
@@ -55,7 +58,7 @@ const App = () => {
                 }}
             >
                 <Header />
-                <ControlPanel step={step} />
+                <ControlPanel />
                 <DiceSum />
 
                 {diceCounter % 2 === 0 ? <ApexCharts /> : ""}
