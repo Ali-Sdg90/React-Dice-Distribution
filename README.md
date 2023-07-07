@@ -8,6 +8,7 @@
             alt="License"
     /></a>
 </p>
+<img src="Gifs/300Delay.gif" alt="app-showcase" />
 <h2>Overview</h2>
 <p>
     React-Dice-Distribution is a visually appealing web application built with
@@ -65,6 +66,7 @@
     </li>
     <li>Dark theme for improved visual comfort</li>
 </ul>
+<img src="Gifs/Infinit-Mode.gif" alt="Infinit-Mode" />
 <h2>Installation</h2>
 <p>
     To run React-Dice-Distribution locally on your machine, follow these steps:
