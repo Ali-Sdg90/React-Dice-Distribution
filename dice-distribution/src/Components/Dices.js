@@ -10,16 +10,16 @@ const Dices = () => {
     const [dices, setDices] = useState([]);
 
     useEffect(() => {
-        let dices = [];
+        let dicesArray = [];
         let sum = 0;
 
         for (let i = 0; i < diceCounter; i++) {
             let diceNumber = Math.floor(Math.random() * 6) + 1;
             sum += diceNumber;
-            dices.push(<Dice key={i} diceNumber={diceNumber} />);
+            dicesArray.push(<Dice key={i} diceNumber={diceNumber} />);
         }
 
-        setDices(dices);
+        setDices(dicesArray);
         setDiceNumSum(sum);
     }, [diceCounter, setDiceNumSum, step]);
 

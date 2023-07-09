@@ -3,10 +3,6 @@ import Styles from "./ApexCharts.module.css";
 import Chart from "react-apexcharts";
 import { AppContext } from "../App";
 
-const generateCategories = (start, end) => {
-    return Array.from({ length: end - start + 1 }, (_, index) => start + index);
-};
-
 const ApexCharts = () => {
     const { diceNumSum, diceCounter } = useContext(AppContext);
 
@@ -30,7 +26,11 @@ const ApexCharts = () => {
         const minDiceNumSum = Math.floor(2.8 * diceCounter);
         const maxDiceNumSum = Math.floor(4.2 * diceCounter);
 
-        const newCategories = generateCategories(minDiceNumSum, maxDiceNumSum);
+        const newCategories = Array.from(
+            { length: maxDiceNumSum - minDiceNumSum + 1 },
+            (_, index) => minDiceNumSum + index
+        );
+        
         setOptions((prevOptions) => ({
             ...prevOptions,
             xaxis: {
